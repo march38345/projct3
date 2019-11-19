@@ -34,6 +34,7 @@ public class Dao {
     }
     public  ArrayList<Game> getall(){
         ArrayList<Game> game = new ArrayList<Game>();
+
         Cursor cursor = database.rawQuery("SELECT * FROM GAME_LIST;",null);
         cursor.moveToFirst();
         Game games;
