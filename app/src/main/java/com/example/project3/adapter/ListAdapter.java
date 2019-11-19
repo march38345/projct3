@@ -8,7 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.project3.Game;
+import com.example.project3.db.Game;
 import com.example.project3.R;
 
 import java.util.ArrayList;

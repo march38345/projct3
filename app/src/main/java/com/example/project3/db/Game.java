@@ -1,9 +1,10 @@
-package com.example.project3;
+package com.example.project3.db;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Game {
+    private int id;
     private String name;
     private String price;
     private int picid;
@@ -18,11 +19,13 @@ public class Game {
         this.detail = detail;
     }
 
-    public Game(int picid, String name, String price, String detail){
-    this.picid = picid;
-    this.name = name;
-    this.price = price;
-    this.detail = detail;
+    public Game(int id,int picid, String name, String price, String detail){
+
+        this.id = id;
+        this.picid = picid;
+        this.name = name;
+        this.price = price;
+        this.detail = detail;
 
 
 }
@@ -59,6 +62,11 @@ public class Game {
         return GameList;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-
+    public int getId() {
+        return id;
+    }
 }
