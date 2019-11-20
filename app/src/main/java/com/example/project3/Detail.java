@@ -2,7 +2,10 @@ package com.example.project3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,6 +33,14 @@ public class Detail extends AppCompatActivity {
         textname.setText(game.getName());
         textinfo.setText(game.getDetail());
         textprice.setText(game.getPrice()+"$");
+        Button buybutton = findViewById(R.id.buybutton);
+        buybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Detail.this,Payment.class);
+                startActivity(intent);
+            }
+        });
 
 
 
